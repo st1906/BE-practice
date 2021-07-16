@@ -1,0 +1,23 @@
+{
+  "name": "service-koa-skeleton",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Stipan Hrzic <stipan.hrzic@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "migrate:latest": "yarn knex migrate:latest",
+    "make:pretty": "yarn prettier --write ."
+  },
+  "dependencies": {
+    "@koa/router": "^10.0.0",
+    "dotenv": "^10.0.0",
+    "knex": "^0.95.7",
+    "koa": "^2.13.1",
+    "koa-bodyparser": "^4.3.0",
+    "pg": "^8.6.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.2"
+  }
+}
