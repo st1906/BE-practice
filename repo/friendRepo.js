@@ -1,12 +1,10 @@
 const db = require("../db");
 const { friendTableName } = require("./conts");
 
-const getFriends = async () => {
-  return await db(friendTableName).select("*");
-};
+const getFriends = () => db(friendTableName).select("*");
 
-const insertFriend = async (payload) => {
-  return await db(friendTableName).insert(
+const insertFriend = (payload) =>
+  db(friendTableName).insert(
     {
       first_name: payload.firstName,
       last_name: payload.lastName,
@@ -14,6 +12,5 @@ const insertFriend = async (payload) => {
     },
     "*"
   );
-};
 
 module.exports = { getFriends, insertFriend };

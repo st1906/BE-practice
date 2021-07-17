@@ -25,6 +25,7 @@ yarn migrate:latest
 ```
 
 To start the server, run:
+
 ```
 yarn start
 ```
