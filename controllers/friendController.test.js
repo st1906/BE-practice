@@ -65,7 +65,7 @@ describe("Friend Controller test suite", () => {
     const mockBody = {
       firstName: "John",
       lastName: "Doe",
-      nicky: "Wat?"
+      nicky: "Wat?",
     };
     try {
       await friendController.insertFriend(mockBody);
