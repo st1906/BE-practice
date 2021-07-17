@@ -1,4 +1,4 @@
-const { friendTableName } = require("../repo/conts");
+const { friendTableName } = require("../repo/consts");
 
 exports.up = function (knex) {
   return knex.schema.createTable(friendTableName, (tb) => {

@@ -1,5 +1,5 @@
 const db = require("../db");
-const { friendTableName } = require("./conts");
+const { friendTableName } = require("./consts");
 
 const getFriends = () => db(friendTableName).select("*");
 
