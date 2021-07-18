@@ -1,6 +1,6 @@
 import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
 
-@Entity()
+@Entity({name: "friend"})
 export class Friend {
 
     @PrimaryGeneratedColumn()
@@ -12,7 +12,9 @@ export class Friend {
     @Column({nullable: false})
     lastName: string;
 
-    @Column({nullable: false})
+    @Column({nullable: true})
     nickname: string;
 
+    @Column()
+    test: string;
 }

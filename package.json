@@ -3,19 +3,31 @@
    "version": "0.0.1",
    "description": "Awesome project developed with TypeORM.",
    "devDependencies": {
-      "ts-node": "3.3.0",
-      "@types/node": "^8.0.29",
-      "typescript": "3.3.3333"
+      "@types/koa": "^2.13.4",
+      "@types/koa-bodyparser": "^4.3.2",
+      "@types/koa__router": "^8.0.7",
+      "@types/node": "^16.3.3",
+      "nodemon": "^2.0.12",
+      "ts-node": "10.1.0"
    },
    "dependencies": {
-      "typeorm": "0.2.34",
+      "@koa/router": "^10.0.0",
+      "dotenv": "^10.0.0",
+      "joi": "^17.4.1",
+      "koa": "^2.13.1",
+      "koa-bodyparser": "^4.3.0",
+      "pg": "^8.4.0",
       "reflect-metadata": "^0.1.10",
-      "pg": "^8.4.0"
+      "typeorm": "0.2.34",
+      "typescript": "^4.3.5"
    },
    "scripts": {
       "start": "ts-node src/index.ts",
+      "build": "rm -rf dist/* && tsc",
+      "serve": "yarn build && NODE_ENV=prod node dist/index.js",
       "typeorm:cli": "yarn ts-node node_modules/.bin/typeorm",
       "migration:generate": "yarn typeorm:cli migration:generate -o -n",
-      "migration:run": "yarn typeorm:cli migration:run"
+      "migration:run": "yarn typeorm:cli migration:run",
+      "migration:revert": "yarn typeorm:cli migration:revert"
    }
 }
