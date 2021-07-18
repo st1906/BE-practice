@@ -1,6 +1,6 @@
 # A simple nodejs server with koa
 
-This is an example of a simple nodejs server using Koa, Postgres and Knex.js.
+This is an example of a simple nodejs server using Koa, Postgres and Sequlize.
 
 ## Getting started
 

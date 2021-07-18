@@ -1,16 +1,16 @@
+const friendModel = require("../models/friend");
 const db = require("../db");
 const { friendTableName } = require("./consts");
 
-const getFriends = () => db(friendTableName).select("*");
+const friendRepo = friendModel(db);
+
+const getFriends = () => friendRepo.findAll();
 
 const insertFriend = (payload) =>
-  db(friendTableName).insert(
-    {
-      first_name: payload.firstName,
-      last_name: payload.lastName,
-      nickname: payload.nickname,
-    },
-    "*"
-  );
+  friendRepo.create({
+    firstName: payload.firstName,
+    lastName: payload.lastName,
+    nickname: payload.nickname,
+  });
 
 module.exports = { getFriends, insertFriend };

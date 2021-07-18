@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node index.js",
-    "migrate:latest": "yarn knex migrate:latest",
+    "migrate:latest": "yarn sequelize-cli db:migrate",
     "make:pretty": "yarn prettier --write .",
     "test": "jest"
   },
@@ -14,13 +14,15 @@
     "@koa/router": "^10.0.0",
     "dotenv": "^10.0.0",
     "joi": "^17.4.1",
-    "knex": "^0.95.7",
     "koa": "^2.13.1",
     "koa-bodyparser": "^4.3.0",
-    "pg": "^8.6.0"
+    "pg": "^8.6.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.6.5"
   },
   "devDependencies": {
     "jest": "^27.0.6",
-    "prettier": "^2.3.2"
+    "prettier": "^2.3.2",
+    "sequelize-cli": "^6.2.0"
   }
 }
