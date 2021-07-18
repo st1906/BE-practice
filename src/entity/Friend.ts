@@ -14,7 +14,4 @@ export class Friend {
 
     @Column({nullable: true})
     nickname: string;
-
-    @Column()
-    test: string;
 }

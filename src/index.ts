@@ -9,7 +9,7 @@ import * as bodyParser from "koa-bodyparser";
 import error from "./middleware/error";
 
 const app = new Koa();
-console.log(process.env.NODE_ENV);
+
 app.use(error);
 app.use(bodyParser());
 app.use(friendRouter.routes());
